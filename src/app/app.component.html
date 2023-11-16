@@ -1,0 +1,40 @@
+
+<!-- <header class="py-4 border-animation">
+  <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">CricketLiveScore</h1>
+      <nav class="flex space-x-4">
+          <a [routerLink]="'/home'" class="hover:text-gray-400">Home</a>
+          <a [routerLink]="'/livescore'" class="hover:text-gray-400">Live Score</a>
+          <a [routerLink]="'/matchhistory'" class="hover:text-gray-400">Match History</a>
+          <a [routerLink]="'/pointsTable'" class="hover:text-gray-400">Points Table</a>
+      </nav>
+      <div></div>
+  </div>
+</header> -->
+<header class="py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo and App Title -->
+    <!-- <div class="flex items-center">-->
+      <!-- <img src="src/images/logo.png" alt="Logo" class="h-10 w-10 mr-2 rounded-full">-->
+      <h1 class="text-3xl font-bold">CricketLiveScore</h1>
+    <!--  </div>-->
+
+    <!-- Navigation Bar -->
+    <nav class="flex space-x-4">
+      <a [routerLink]="'/home'" class="nav-link">Home</a>
+      <a [routerLink]="'/livescore'" class="nav-link">Live Score</a>
+      <a [routerLink]="'/matchhistory'" class="nav-link">Match History</a>
+      <a [routerLink]="'/pointsTable'" class="nav-link">Points Table</a>
+    </nav>
+
+    <!-- User Profile Section (Placeholder) -->
+    <div class="flex items-center">
+      <!-- <div class="mx-4">
+        <img src="src\images\logo1.jpg" alt="User Profile" class="h-10 w-10 rounded-full">
+      </div>-->
+      <span class="text-gray-100">User</span>
+    </div>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

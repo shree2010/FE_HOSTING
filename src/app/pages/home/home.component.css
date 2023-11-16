@@ -1,0 +1,11 @@
+/* your-component.component.css */
+
+:host {
+    display: block;
+  }
+  
+  .text-6xl {
+    color: #3498db; /* Change to your preferred color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+  }
+  

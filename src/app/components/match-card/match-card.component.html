@@ -1,0 +1,63 @@
+<div>
+
+@if (match) {
+    <div class="matchCard bg-gray-800 text-white p-4 rounded-md shadow-md transition transform hover:scale-105">
+
+        <div class="header text-2xl font-bold mb-2 flex justify-between items-center">
+            <span>{{ match.teamHeading }}</span>
+            <span class="text-sm">{{ match.matchNumberVenue }}</span>
+        </div>
+    
+        <div class="body grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Batting Team -->
+            <div class="col-span-2 sm:col-span-1">
+                <p class="font-bold mb-1">Batting Team</p>
+                <p>{{ match.battingTeam }}</p>
+                <p>{{ match.battingTeamScore }}</p>
+            </div>
+    
+            <!-- Bowling Team -->
+            <div class="col-span-2 sm:col-span-1">
+                <p class="font-bold mb-1">Bowling Team</p>
+                <p>{{ match.bowlTeam }}</p>
+                <p>{{ match.bowlTeamScore }}</p>
+            </div>
+    
+            <!-- Live Text -->
+            <div class="col-span-2 sm:col-span-1">
+                <p class="font-bold mb-1">Live Text</p>
+                <p>{{ match.liveText }}</p>
+            </div>
+    
+            <!-- Status -->
+            <div class="col-span-2 sm:col-span-1">
+                <p class="font-bold mb-1">Status</p>
+                <ng-container *ngIf="match.status === 'LIVE'; else completedStatus">
+                    <p class="text-yellow-500 font-bold">{{ match.status }}</p>
+                </ng-container>
+                <ng-template #completedStatus>
+                    <p class="text-green-500 font-bold">{{ match.status }}</p>
+                    <p>{{ match.textComplete }}</p>
+                </ng-template>
+            </div>
+    
+            <!-- Date -->
+            <div class="col-span-2 sm:col-span-1">
+                <p class="font-bold mb-1">Date</p>
+                <p>{{ match.date }}</p>
+            </div>
+    
+            <!-- View Details -->
+            <div class="col-span-2 sm:col-span-1">
+                <p class="font-bold mb-1">Details</p>
+                <a [routerLink]="'/matchhistory'" class="text-blue-500 hover:underline" >View Details</a>
+            </div>
+        </div>
+    
+        <div class="footer mt-4 text-sm text-gray-500">
+            <!-- Additional footer content if needed -->
+        </div>
+    
+    </div>
+}
+</div>
